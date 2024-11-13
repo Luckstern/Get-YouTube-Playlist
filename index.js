@@ -1,8 +1,7 @@
 async function getID(url) {
-    const response = fetch(`https://yt-api.luckstern.hackclub.app/id?url=${encodeURIComponent(url)}`, {method: "GET"});
-    if (response.ok) {
-        return await response.text();
-    }
+    fetch(`https://yt-api.luckstern.hackclub.app/id?url=${encodeURIComponent(url)}`, {method: "GET"})
+        .then(res => res.text())
+        .then(text => console.log(text));
 }
 
 function getLatest() {

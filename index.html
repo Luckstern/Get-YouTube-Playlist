@@ -13,5 +13,8 @@
         <input type="text" id="url">
         <button id="latest">Get Latest Videos</button>
         <button id="popular">Get Popular Videos</button>
+        <script>
+            document.getElementById("latest").addEventListener("click", () => getID(document.getElementById("url").value));
+        </script>
     </body>
 </html>

@@ -73,4 +73,5 @@ button:active {
 iframe {
     width: 100%;
     height: 100%;
+    border-radius: 0 12px 12px 0;
 }

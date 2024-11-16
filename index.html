@@ -22,17 +22,19 @@
                 </div>
             </section>
             <section>
-                <span style="white-space: pre-wrap">
-                    Instructions:
-                    Input a channel URL in the format of
-                    <i>[https://][www.]youtube.com/@&lt;channel_handle&gt;</i>
-                </span>
+                    <ul id="instructions">
+                        <p>Instructions:</p>
+                        <li>Input a channel URL in the format of <i>[https://][www.]youtube.com/@&lt;channel_handle&gt;</i></li>
+                        <li>Select <b>Get Latest Videos</b> or <b>Get Popular Videos</b> to get the corresponding playlist for the given channel</li>
+                        <li>An embed for the playlist should appear here!</li>
+                    </ul>
                 <iframe id="link" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
         </main>
         <script>
-            document.getElementById("latest").addEventListener("click", () => getLatest());
-            document.getElementById("popular").addEventListener("click", () => getPopular());
+            document.getElementById("latest").addEventListener("click", getLatest, false);
+            document.getElementById("popular").addEventListener("click", getPopular, false);
+            document.addEventListener("fullscreenchange", editIframeBorderRadius, false);
         </script>
     </body>
 </html>

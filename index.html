@@ -22,13 +22,22 @@
                 </div>
             </section>
             <section>
-                    <ul id="instructions">
-                        <p>Instructions:</p>
+                <div id="instructions">
+                    <p>Instructions:</p>
+                    <ul id="list">
                         <li>Input a channel URL in the format of <i>[https://][www.]youtube.com/@&lt;channel_handle&gt;</i></li>
                         <li>Select <b>Get Latest Videos</b> or <b>Get Popular Videos</b> to get the corresponding playlist for the given channel</li>
                         <li>An embed for the playlist should appear here!</li>
                     </ul>
-                <iframe id="link" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <!--suppress HtmlDeprecatedAttribute -->
+                <iframe id="link"
+                        src=""
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
             </section>
         </main>
         <script>

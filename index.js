@@ -18,7 +18,7 @@ function getPopular() {
         });
 }
 
-function editIframeBorderRadius(e) {
+function editIframeBorderRadius() {
     if (document.fullscreenElement) {
         document.getElementById("link").style.borderRadius = "0";
     } else {

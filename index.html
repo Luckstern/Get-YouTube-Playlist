@@ -1,20 +1,38 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />-->
+        <meta http-equiv="Expires" content="0" />
         <title>Get YouTube Playlists</title>
         <script src="index.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <label for="url">Channel URL:</label>
-        <input type="text" id="url">
-        <button id="latest">Get Latest Videos</button>
-        <button id="popular">Get Popular Videos</button>
+        <header>
+            <h1>Get YouTube Playlist</h1>
+        </header>
+        <main>
+            <section id="inputs">
+                <label for="url">Channel URL</label>
+                <input type="text" id="url" placeholder="https://www.youtube.com/@YouTube">
+                <div id="buttons">
+                    <button id="latest">Get Latest Videos</button>
+                    <button id="popular">Get Popular Videos</button>
+                </div>
+            </section>
+            <section>
+                <span style="white-space: pre-wrap">
+                    Instructions:
+                    Input a channel URL in the format of
+                    <i>[https://][www.]youtube.com/@&lt;channel_handle&gt;</i>
+                </span>
+                <iframe id="link" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+        </main>
         <script>
-            document.getElementById("latest").addEventListener("click", () => getID(document.getElementById("url").value));
+            document.getElementById("latest").addEventListener("click", () => getLatest());
+            document.getElementById("popular").addEventListener("click", () => getPopular());
         </script>
     </body>
 </html>

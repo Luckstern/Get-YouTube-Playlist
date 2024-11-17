@@ -14,8 +14,13 @@
         </header>
         <main>
             <section id="inputs">
-                <label for="url">Channel URL</label>
-                <input type="text" id="url" placeholder="https://www.youtube.com/@YouTube">
+                <label for="channel-input" id="channel-label">Channel Link</label>
+                <input id="channel-input" type="text" placeholder="https://www.youtube.com/@YouTube" pattern="(https://)?(www.)?youtube.com/@[A-Za-z]+">
+                <span id="status"></span>
+                <div id="manual-container">
+                    <input type="checkbox" id="manual">
+                    <label for="manual">Manually Input Channel ID</label>
+                </div>
                 <div id="buttons">
                     <button id="latest">Get Latest Videos</button>
                     <button id="popular">Get Popular Videos</button>
@@ -25,7 +30,7 @@
                 <div id="instructions">
                     <p>Instructions:</p>
                     <ul id="list">
-                        <li>Input a channel URL in the format of <i>[https://][www.]youtube.com/@&lt;channel_handle&gt;</i></li>
+                        <li>Input either a channel URL in the format of <i>[https://][www.]youtube.com/@&lt;channel_handle&gt;</i> or the channel ID(e.g. <i>UCBR8-60-B28hp2BmDPdntcQ</i>) if <b>Manually Input Channel ID</b> is enabled</li>
                         <li>Select <b>Get Latest Videos</b> or <b>Get Popular Videos</b> to get the corresponding playlist for the given channel</li>
                         <li>An embed for the playlist should appear here!</li>
                     </ul>
@@ -41,6 +46,7 @@
         <script>
             document.getElementById("latest").addEventListener("click", getLatest, false);
             document.getElementById("popular").addEventListener("click", getPopular, false);
+            document.getElementById("manual").addEventListener("change", manualInput, false);
             document.addEventListener("fullscreenchange", editIframeBorderRadius, false);
         </script>
     </body>

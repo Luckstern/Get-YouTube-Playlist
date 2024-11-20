@@ -56,7 +56,6 @@ section {
     display: flex;
     flex-direction: row;
     margin: 10px;
-    //background: red;
 }
 
 #buttons {
@@ -90,4 +89,9 @@ iframe {
     height: 100%;
     border: 0;
     border-radius: 0 12px 12px 0;
+}
+
+span {
+    white-space: normal;
+    max-width: 100%;
 }

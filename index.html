@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta http-equiv="Pragma" content="no-cache" />
-        <meta http-equiv="Expires" content="0" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
         <title>Get Channel Playlists</title>
         <script src="index.js"></script>
         <link rel="stylesheet" href="style.css">
@@ -15,7 +16,7 @@
         <main>
             <section id="inputs">
                 <label for="channel-input" id="channel-label">Channel Link</label>
-                <input id="channel-input" type="text" placeholder="https://www.youtube.com/@YouTube" pattern="(https://)?(www.)?youtube.com/@[A-Za-z]+">
+                <input id="channel-input" type="text" placeholder="https://www.youtube.com/@YouTube" pattern="(https://)?(www.)?youtube.com/@[_\\-\\.A-Za-z0-9·]{3,}">
                 <span id="status"></span>
                 <div id="manual-container">
                     <input type="checkbox" id="manual">
